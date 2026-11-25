@@ -36,4 +36,24 @@ int main() {
 }
 Explaination: it runs a simple program that prints “this is a simple program. \n” it also allows to inspect the shared libraries using lld.
 
+1-(4)
+all: process_creation output_program simple_program
+
+process_creation: process_creation.c
+	gcc process_creation.c -o process_creation
+
+output_program: file1.c file2.c
+	gcc file1.c file2.c -o output_program
+
+simple_program: simple_program.c
+	gcc simple_program.c -o simple_program
+
+clean:
+	rm -f process_creation output_program simple_program
+Explanation: The Makefile automates compiling all the C programs using gcc so I do not have to type each compile command manually every time.
+all: This is the default target that runs when typing make. It depends on process_creation, output_program, and simple_program, so running make builds all three executables at once.
+process_creation: Compiles process_creation.c into the executable file process_creation.
+output_program: Compiles and links both file1.c and file2.c together into a single executable named output_program.
+simple_program: Compiles simple_program.c into the executable file simple_program.
+clean: Removes the three compiled executable files from the folder so the directory stays clean or can be rebuilt from scratch.
 
