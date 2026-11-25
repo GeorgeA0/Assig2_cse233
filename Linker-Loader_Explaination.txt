@@ -1,0 +1,4 @@
+ Job of the Linker:GCC is used for compiling and linking multiple files: the Translator converts Source Code into Object Code, and the Linker takes the Object Code and produces the Executable file.
+ 
+ Job of the Loader:the Loader takes the Executable file and loads it into Memory, dynamically loading the required shared libraries using lld, when the program runs.
+

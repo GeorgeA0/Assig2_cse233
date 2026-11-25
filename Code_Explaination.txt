@@ -1,0 +1,39 @@
+1-(1)
+#include <stdio.h>
+#include <unistd.h>
+int main() {
+    pid_t pid = fork();
+    if (pid == 0) {
+        printf("This is the child process. PID: %d\n", getpid());
+    } else if (pid > 0) {
+        printf("This is the parent process. PID: %d\n", getpid());
+    } else {
+        printf("Fork failed!\n");   }
+    return 0;}
+Explaination: 
+1- when pid==00, it runs the child block and print child pid using getpid() 
+2- it runs the parent block and print parent pid using getpid()
+3- if pid isn’t =0 or >0, it print else runs and prints fork failed 
+
+1-(2)
+File1.c
+#include <stdio.h>
+void hello() {
+    printf("Hello from file1!\n");
+}
+File2.c
+void hello();
+int main() {   hello(); 
+ return 0;}
+Explaination: it uses 2 C files, file1.c it defines the hello() function. 
+While file2.c calls hello()inside main(), then compiles and links both files together into a single executable (output_program)
+
+1-(3)
+#include <stdio.h>
+int main() {
+    printf("This is a simple program.\n");
+    return 0;
+}
+Explaination: it runs a simple program that prints “this is a simple program. \n” it also allows to inspect the shared libraries using lld.
+
+
