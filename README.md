@@ -19,4 +19,4 @@ You need `gcc` and `make` installed on Linux (Ubuntu):
 ```bash
 sudo apt update
 sudo apt install gcc make
-don't forget to write your password ;)
+
