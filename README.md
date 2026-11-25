@@ -14,7 +14,7 @@ Operating Systems assignment covering process creation with `fork()`, linking mu
 
 ## Installation
 
-You need `gcc` and `make` installed on Linux (Ubuntu/Debian):
+You need `gcc` and `make` installed on Linux (Ubuntu):
 
 ```bash
 sudo apt update
